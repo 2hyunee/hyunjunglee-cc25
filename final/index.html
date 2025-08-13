@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Memory Card Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="app" role="application" aria-label="Memory card matching game">
+    <header>
+      <h1>Memory Match Card Game <span aria-hidden="true"></span></h1>
+      <div class="stats" aria-live="polite">
+        <div class="stat">⏱️ Time: <b id="time">00:00</b></div>
+        <div class="stat">🎯 Moves: <b id="moves">0</b></div>
+        <div class="stat">🏆 Best: <b id="best">--</b></div>
+        <button id="restart" class="btn" type="button" aria-label="Restart game">Reset</button>
+      </div>
+    </header>
+
+    <section class="board">
+      <div id="grid" class="grid" aria-label="Cards grid"></div>
+    </section>
+  </div>
+
+  <div id="win" class="modal" role="dialog" aria-modal="true" aria-labelledby="win-title">
+    <div class="dialog">
+      <h2 id="win-title">You Win! 🎉</h2>
+      <p>Time: <b id="win-time">00:00</b> · Moves: <b id="win-moves">0</b></p>
+      <button class="btn" id="play-again" type="button">Play Again</button>
+    </div>
+  </div>
+  
+  <script src="logic.js"></script>
+
+</body>
+</html>
